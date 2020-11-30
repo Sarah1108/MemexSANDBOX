@@ -1,0 +1,5 @@
+path_to_memex: C:\Users\Sarah\Documents\Uni\MA_DigitalHumanities\UE_ToolsandTechniques\MemexSANDBOX\_data
+bib_all: ./_bib/zotero_bibliography.bib
+bibtex_keys: ./_bib/bibtex_keys.yml
+language_keys: ./_bib/bibtex_languages.yml
+#path_to_pdf: C:\Users\Sarah\Documents\Uni\MA_DigitalHumanities\UE_ToolsandTechniques\MemexSANDBOX\_data\a\al\alexanderShouldLiberalArts2012\alexanderShouldLiberalArts2012.pdf

@@ -2,6 +2,8 @@ import PyPDF2
 import functions
 import yaml
 import os
+import json
+
 
 settingsFile = "./settings.yml"
 settings = yaml.safe_load(open(settingsFile))

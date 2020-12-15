@@ -32,7 +32,7 @@ def checkLangId(record):
         
     return tempLang
 
-def ocrPublication(pathToMemex, citationKey, language): 
+def ocrPublication(Memex, citationKey, language): 
     publPath = functions.generatePublPath(memexPath, citationKey)
     pdfFile  = os.path.join(publPath, citationKey + ".pdf")
     jsonFile = os.path.join(publPath, citationKey + ".json")

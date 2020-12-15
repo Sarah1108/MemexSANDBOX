@@ -1,5 +1,16 @@
 path_to_memex: C:\Users\Sarah\Documents\Uni\MA_DigitalHumanities\UE_ToolsandTechniques\MemexSANDBOX\_data
 bib_all: ./_bib/zotero_bibliography.bib
 bibtex_keys: ./_bib/bibtex_keys.yml
-language_keys: ./_bib/bibtex_languages.yml
+language_keys: C:\Users\Sarah\Documents\Uni\MA_DigitalHumanities\UE_ToolsandTechniques\MemexSANDBOX\_bib\bibtex_languages.yml
 #path_to_pdf: C:\Users\Sarah\Documents\Uni\MA_DigitalHumanities\UE_ToolsandTechniques\MemexSANDBOX\_data\a\al\alexanderShouldLiberalArts2012\alexanderShouldLiberalArts2012.pdf
+# TEMPLATES AND CONTENT FILES FOR THE INTERFACE
+template_page: ./_misc/template_page.html
+template_index: ./_misc/template_index.html
+content_index: ./_misc/content_index.html
+
+# GENERATED FILES AND EXTENSIONS
+memexDF_file: ./_data/memex.documentFrequencies
+tfPubl_ext: .publTF # term frequencies per entire publication
+tfPage_ext: .pageTF # term frequencies per each page
+tfIdfPubl_ext: .publTFIDF # tfIdf frequencies per entire publication
+tfIdfPage_ext: .pageTFIDF # tfIdf frequencies per each page

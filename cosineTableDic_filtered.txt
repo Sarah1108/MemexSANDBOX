@@ -1,0 +1,189 @@
+{
+    "DavisMartin2018Tuc": {},
+    "InterpretativeMechanismsTextual": {
+        "apollonbelisleDigitalCriticalEditions2014": 0.34068430651471643,
+        "earhartDigitalEditionDigital2012": 0.3451177524350993,
+        "eggertReaderorientedScholarlyEdition2016": 0.35048412957747405,
+        "oreMonkeyBusinessWhat2004": 0.26443494260638317
+    },
+    "LexIslandorumJonsbok16Jahrhundert": {},
+    "alexanderShouldLiberalArts2012": {
+        "fraistatFunctionDigitalHumanities2012": 0.2515868251411535,
+        "waltzerDigitalHumanitiesUgly2012": 0.2776148975731624
+    },
+    "andersonTakingLongView2012": {
+        "edmondDigitalTechnologyPractices2020": 0.3717146333461397,
+        "zundertIfYouBuild2012": 0.40790445346750415
+    },
+    "apollonbelisleDigitalCriticalEditions2014": {
+        "InterpretativeMechanismsTextual": 0.34068430651471643,
+        "carlquistMedievalManuscriptsHypertext2004": 0.41823550489458383,
+        "earhartDigitalEditionDigital2012": 0.5094217003257681,
+        "eggertReaderorientedScholarlyEdition2016": 0.5703967372846679,
+        "oreMonkeyBusinessWhat2004": 0.5256059903019672,
+        "robinsonProjectbasedDigitalHumanities2016": 0.2708014459706689
+    },
+    "carlquistMedievalManuscriptsHypertext2004": {
+        "apollonbelisleDigitalCriticalEditions2014": 0.41823550489458383,
+        "oreMonkeyBusinessWhat2004": 0.2948863001885068
+    },
+    "champollionDistributivityCollectivityCumulativity": {},
+    "cortifieldingbishopEditorialSpecialEdition2016": {},
+    "davidsonHumanitiesPromisePerils2012": {
+        "loshHacktivismHumanitiesProgramming2012": 0.2869077304804212
+    },
+    "druckerHumanisticTheoryDigital2012": {},
+    "earhartCanInformationBe2012": {
+        "earhartDigitalEditionDigital2012": 0.2687014385138236
+    },
+    "earhartDigitalEditionDigital2012": {
+        "InterpretativeMechanismsTextual": 0.3451177524350993,
+        "apollonbelisleDigitalCriticalEditions2014": 0.5094217003257681,
+        "earhartCanInformationBe2012": 0.2687014385138236,
+        "eggertReaderorientedScholarlyEdition2016": 0.5825699260888264,
+        "oreMonkeyBusinessWhat2004": 0.5100760795074527
+    },
+    "edmondDigitalTechnologyPractices2020": {
+        "andersonTakingLongView2012": 0.3717146333461397,
+        "edwardsDigitalHumanitiesIts2012": 0.27186695926397014,
+        "fitzpatrickMetricsCommunityAuthorization2012": 0.30689482298846155,
+        "fyfeElectronicErrataDigital2012": 0.26123614085170094,
+        "goldIntroductionDigitalHumanities2012": 0.2775288626020441,
+        "greethamResistanceDigitalHumanities2012": 0.2925241639594921,
+        "ramsayDevelopingThingsNotes2012": 0.26203273541192384,
+        "svenssonBigTent2012": 0.2740656950087473,
+        "zundertIfYouBuild2012": 0.36442292635110896
+    },
+    "edwardsDigitalHumanitiesIts2012": {
+        "edmondDigitalTechnologyPractices2020": 0.27186695926397014,
+        "goldIntroductionDigitalHumanities2012": 0.3381674963891013,
+        "greethamResistanceDigitalHumanities2012": 0.37797798407409594,
+        "kirschenbaumDigitalHumanitiesTactical2012": 0.31375174667283173,
+        "kirschenbaumWhatDigitalHumanities2012": 0.25479409796968167,
+        "parryDigitalHumanitiesDigital2012": 0.32446318299799454,
+        "spiroThisWhyWe2012": 0.3057279318483214
+    },
+    "eggertReaderorientedScholarlyEdition2016": {
+        "InterpretativeMechanismsTextual": 0.35048412957747405,
+        "apollonbelisleDigitalCriticalEditions2014": 0.5703967372846679,
+        "earhartDigitalEditionDigital2012": 0.5825699260888264,
+        "oreMonkeyBusinessWhat2004": 0.5502428472155605
+    },
+    "fickWorterbuchIndogermanischenSprachena": {
+        "fickWortschatzGermanischenSpracheinheit": 0.9999999999999999
+    },
+    "fickWortschatzGermanischenSpracheinheit": {
+        "fickWorterbuchIndogermanischenSprachena": 0.9999999999999999
+    },
+    "fitzpatrickMetricsCommunityAuthorization2012": {
+        "edmondDigitalTechnologyPractices2020": 0.30689482298846155,
+        "fyfeElectronicErrataDigital2012": 0.27491380697841555,
+        "goldIntroductionDigitalHumanities2012": 0.2965901782554535
+    },
+    "flandersTimeLaborAlternate2012": {},
+    "fraistatFunctionDigitalHumanities2012": {
+        "alexanderShouldLiberalArts2012": 0.2515868251411535
+    },
+    "fyfeElectronicErrataDigital2012": {
+        "edmondDigitalTechnologyPractices2020": 0.26123614085170094,
+        "fitzpatrickMetricsCommunityAuthorization2012": 0.27491380697841555
+    },
+    "goldAcknowledgments2012": {},
+    "goldContributors2012": {},
+    "goldFrontMatter2012": {},
+    "goldIntroductionDigitalHumanities2012": {
+        "edmondDigitalTechnologyPractices2020": 0.2775288626020441,
+        "edwardsDigitalHumanitiesIts2012": 0.3381674963891013,
+        "fitzpatrickMetricsCommunityAuthorization2012": 0.2965901782554535,
+        "greethamResistanceDigitalHumanities2012": 0.2764313322396742,
+        "waltzerDigitalHumanitiesUgly2012": 0.27373029247971936
+    },
+    "goldTableContents2012": {},
+    "greethamResistanceDigitalHumanities2012": {
+        "edmondDigitalTechnologyPractices2020": 0.2925241639594921,
+        "edwardsDigitalHumanitiesIts2012": 0.37797798407409594,
+        "goldIntroductionDigitalHumanities2012": 0.2764313322396742,
+        "kirschenbaumWhatDigitalHumanities2012": 0.2732902783184633
+    },
+    "haugenAltnordischePhilologieNorwegen2011": {
+        "kittlerGrammophonFilmTypewriter1986": 0.4052929494401046,
+        "malcherFaszinationGewaltRezeptionsaesthetische2009": 0.3565778745948256
+    },
+    "kirschenbaumDigitalHumanitiesTactical2012": {
+        "edwardsDigitalHumanitiesIts2012": 0.31375174667283173,
+        "kirschenbaumWhatDigitalHumanities2012": 0.3079021756144648,
+        "waltzerDigitalHumanitiesUgly2012": 0.25011146272281476
+    },
+    "kirschenbaumWhatDigitalHumanities2012": {
+        "edwardsDigitalHumanitiesIts2012": 0.25479409796968167,
+        "greethamResistanceDigitalHumanities2012": 0.2732902783184633,
+        "kirschenbaumDigitalHumanitiesTactical2012": 0.3079021756144648
+    },
+    "kittlerGrammophonFilmTypewriter1986": {
+        "haugenAltnordischePhilologieNorwegen2011": 0.4052929494401046,
+        "malcherFaszinationGewaltRezeptionsaesthetische2009": 0.55817841329493
+    },
+    "latourScienceActionHow2005": {},
+    "liuWhereCulturalCriticism2012": {
+        "mccartyTelescopeMind2012": 0.27211345666275133
+    },
+    "loshHacktivismHumanitiesProgramming2012": {
+        "davidsonHumanitiesPromisePerils2012": 0.2869077304804212
+    },
+    "malcherFaszinationGewaltRezeptionsaesthetische2009": {
+        "haugenAltnordischePhilologieNorwegen2011": 0.3565778745948256,
+        "kittlerGrammophonFilmTypewriter1986": 0.55817841329493
+    },
+    "manovichTrendingPromisesChallenges2012": {},
+    "mccartyTelescopeMind2012": {
+        "liuWhereCulturalCriticism2012": 0.27211345666275133,
+        "ramsayDevelopingThingsNotes2012": 0.25226183480323194,
+        "svenssonBigTent2012": 0.2552209485615659
+    },
+    "mcphersonWhyAreDigital2012": {},
+    "oreMonkeyBusinessWhat2004": {
+        "InterpretativeMechanismsTextual": 0.26443494260638317,
+        "apollonbelisleDigitalCriticalEditions2014": 0.5256059903019672,
+        "carlquistMedievalManuscriptsHypertext2004": 0.2948863001885068,
+        "earhartDigitalEditionDigital2012": 0.5100760795074527,
+        "eggertReaderorientedScholarlyEdition2016": 0.5502428472155605
+    },
+    "parryDigitalHumanitiesDigital2012": {
+        "edwardsDigitalHumanitiesIts2012": 0.32446318299799454
+    },
+    "ramsayDevelopingThingsNotes2012": {
+        "edmondDigitalTechnologyPractices2020": 0.26203273541192384,
+        "mccartyTelescopeMind2012": 0.25226183480323194
+    },
+    "reidGraduateEducationEthics2012": {},
+    "risamWhatPassesHuman2018": {},
+    "robinsonProjectbasedDigitalHumanities2016": {
+        "apollonbelisleDigitalCriticalEditions2014": 0.2708014459706689
+    },
+    "sackUniversalTheatreMachine2017": {},
+    "sampleUnseenUnremarkedDon2012": {},
+    "sayersRoutledgeCompanionMedia2018": {},
+    "snowTwoCulturesSignificance1962": {},
+    "spiroThisWhyWe2012": {
+        "edwardsDigitalHumanitiesIts2012": 0.3057279318483214,
+        "waltzerDigitalHumanitiesUgly2012": 0.2842369453244067
+    },
+    "strauchMittelalterlichesNordischesRecht2016": {},
+    "svenssonBigTent2012": {
+        "edmondDigitalTechnologyPractices2020": 0.2740656950087473,
+        "mccartyTelescopeMind2012": 0.2552209485615659
+    },
+    "tonerDatingMedievalTexts2020": {},
+    "waltzerDigitalHumanitiesUgly2012": {
+        "alexanderShouldLiberalArts2012": 0.2776148975731624,
+        "goldIntroductionDigitalHumanities2012": 0.27373029247971936,
+        "kirschenbaumDigitalHumanitiesTactical2012": 0.25011146272281476,
+        "spiroThisWhyWe2012": 0.2842369453244067
+    },
+    "wilkensCanonsCloseReading2012": {},
+    "williamsDisabilityUniversalDesign2012": {},
+    "zundertIfYouBuild2012": {
+        "andersonTakingLongView2012": 0.40790445346750415,
+        "edmondDigitalTechnologyPractices2020": 0.36442292635110896
+    }
+}

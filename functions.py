@@ -77,6 +77,8 @@ def generatePageLinks(pNumList):
         pageDic[l] = toc.replace('>%s<' % l, ' style="color: red;">%s<' % l)
 
     return(pageDic)
+
+    
 #prettifyBib
 
 def prettifyBib(bibText):
@@ -153,6 +155,7 @@ def removeCommentsFromPDF(pathToPdf):
     return(tempPDF)
 
 def identifyLanguage(bibRecDict, fallBackLanguage):
+
     if "langid" in bibRecDict:
         try:
             language = langKeys[bibRecDict["langid"]]
@@ -167,3 +170,12 @@ def identifyLanguage(bibRecDict, fallBackLanguage):
         language = fallBackLanguage
     print(message)
     return(language)
+def filterDic(dic, thold):
+    retDic = {}    #empty Dictonary to copy filterd values into
+    for k,v in dic.items():     #loop through outer first dic, containig the titles
+        retDic[k]={}            #create a subDic for each title
+        for key,val in v.items():   #loop through the entries of each title
+            if val > thold:         #check threshold
+                if k != key:        #check to not match the publication with itself
+                    retDic[k][key] = val    #add value
+    return(retDic)

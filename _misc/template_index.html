@@ -6,14 +6,41 @@
 <title>MEMEX SANDBOX</title>
 <meta name="description" content="MEMEX SANDBOX">
 <link rel="stylesheet" type="text/css" href="../_misc/style.css">
+<script type="text/javascript" src="../_misc/index.js"></script>
+
+<!-- Activating Data Table Filtering -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+  
+<!--
+<script>
+    $(document).ready(function () {
+        $('#publications').DataTable({
+          "pageLength": 50
+        });
+    });
+</script>
+-->
+
+<script>
+    $(document).ready(function () {
+        $('table.display').DataTable({
+          "pageLength": 25
+        });
+    });
+</script>
+
+
+<!--ADDITIONALFUNCTIONALITYELEMENTS-->
 
 </head>
 <body>
 
 <div class="sidenavindex">
-  <a class="active" href="./contents.html">CONTENTS</a>
   <!--
-  <a class="active" href="./thematic.html">THEMATIC</a>
+  <a class="active" href="./contents.html">CONTENTS</a>
+  <a class="active" href="./searches.html">SEARCHES</a>
   <a class="active" href="./keywords.html">KEYWORDS</a>
   <a class="active" href="./indices.html">INDICES</a>
   -->
@@ -22,13 +49,25 @@
 <div class="maintext">
 
 <div class="topnav">
-  <a class="active" href="./index.html" style="float:right">MEMEX SANDBOX</a>
+  <a class="active" href="./searchesInterface.html" style="float:right">MEMEX SANDBOX</a>
 </div>
 
   <!-- TOPFILE -->
+<img src="../_misc/memex.jpg" width="80%" alt="image of the page...">
+  
+  <p class="english">
+  The uncollapsible Memex </p>
 
-  @MAINCONTENT@
-  <li><a href="@PATHTOPUBL@/pages/DETAILS.html">[@CITEKEY@]</a> @AUTHOR@ (@DATE@) - <i>@TITLE@</i></li>
+  <p class="english" >
+  WHY DON'T you click the BUTTON?!  
+  Wintersemester 2020/2021 
+  Methodenkurs 070172 Introduction to DH:Tools and Techniques
+
+  </p>
+
+
+  @SEARCHES@
+  @PUBLICATIONS@
 
   <!-- BOTFILE -->
 
@@ -36,7 +75,7 @@
 <!--INSERTADDITIONALELEMENTS-->
 
 <div class="topnav">
-  <a class="active" href="./index.html" style="float:right">MEMEX SANDBOX</a>
+  <a class="active" href="./searchesInterface.html" style="float:right">MEMEX SANDBOX</a>
 </div>
 
 </div>

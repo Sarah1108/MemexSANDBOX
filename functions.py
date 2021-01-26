@@ -77,9 +77,147 @@ def generatePageLinks(pNumList):
         pageDic[l] = toc.replace('>%s<' % l, ' style="color: red;">%s<' % l)
 
     return(pageDic)
-
     
-#prettifyBib
+def generatePublicationInterface(citeKey, pathToBibFile):
+    print("="*80)
+    print(citeKey)
+
+    jsonFile = pathToBibFile.replace(".bib", ".json")
+    with open(jsonFile, encoding="utf8") as jsonData:
+        ocred = json.load(jsonData)
+        pNums = ocred.keys()
+
+        pageDic = generatePageLinks(pNums)
+
+        # load page template
+        with open(settings["template_page"], "r", encoding="utf8") as ft:
+            template = ft.read()
+
+        # load individual bib record
+        bibFile = pathToBibFile
+        bibDic = functions.loadBib(bibFile)
+        bibForHTML = prettifyBib(bibDic[citeKey]["complete"])
+
+        orderedPages = list(pageDic.keys())
+
+        for o in range(0, len(orderedPages)):
+            #print(o)
+            k = orderedPages[o]
+            v = pageDic[orderedPages[o]]
+
+            pageTemp = template
+            pageTemp = pageTemp.replace("@PAGELINKS@", v)
+            pageTemp = pageTemp.replace("@PATHTOFILE@", "")
+            pageTemp = pageTemp.replace("@CITATIONKEY@", citeKey)
+
+            if k != "DETAILS":
+                mainElement = '<img src="@PAGEFILE@" width="100%" alt="">'.replace("@PAGEFILE@", "%s.png" % k)
+                pageTemp = pageTemp.replace("@MAINELEMENT@", mainElement)
+                pageTemp = pageTemp.replace("@OCREDCONTENT@", ocred[k].replace("\n", "<br>"))
+            else:
+                mainElement = bibForHTML.replace("\n", "<br> ")
+                mainElement = '<div class="bib">%s</div>' % mainElement
+                mainElement += '\n<img src="wordcloud.jpg" width="100%" alt="wordcloud">'
+                pageTemp = pageTemp.replace("@MAINELEMENT@", mainElement)
+                pageTemp = pageTemp.replace("@OCREDCONTENT@", "")
+
+            # @NEXTPAGEHTML@ and @PREVIOUSPAGEHTML@
+            if k == "DETAILS":
+                nextPage = "0001.html"
+                prevPage = ""
+            elif k == "0001":
+                nextPage = "0002.html"
+                prevPage = "DETAILS.html"
+            elif o == len(orderedPages)-1:
+                nextPage = ""
+                prevPage = orderedPages[o-1] + ".html"
+            else:
+                nextPage = orderedPages[o+1] + ".html"
+                prevPage = orderedPages[o-1] + ".html"
+
+            pageTemp = pageTemp.replace("@NEXTPAGEHTML@", nextPage)
+            pageTemp = pageTemp.replace("@PREVIOUSPAGEHTML@", prevPage)
+
+            pagePath = os.path.join(pathToBibFile.replace(citeKey+".bib", ""), "pages", "%s.html" % k)
+            with open(pagePath, "w", encoding="utf8") as f9:
+                f9.write(pageTemp)
+
+
+def loadYmlSettings(ymlFile):
+    with open(ymlFile, "r", encoding="utf8") as f1:
+        data = f1.read()
+        data = re.sub(r"#.*", "", data) # remove comments
+        data = re.sub(r"\n+", "\n", data) # remove extra linebreaks used for readability
+        data = re.split(r"\n(?=\w)", data) # splitting
+        dic = {}
+        for d in data:
+            if ":" in d:
+                d = re.sub(r"\s+", " ", d.strip())
+                d = re.split(r"^([^:]+) *:", d)[1:]
+                key = d[0].strip()
+                value = d[1].strip()
+                if key == "prioritized_publ":
+                    value = d[1].strip()
+                    value = re.sub("\s+", "", value).split(",")
+                dic[key] = value
+    #input(dic)
+    return(dic)
+
+
+def removeFilesOfType(pathToMemex, fileExtension):
+    if fileExtension in [".pdf", ".bib"]:
+        sys.exit("files with extension %s must not be deleted in batch!!! Exiting..." % fileExtension)
+    else:
+        for subdir, dirs, files in os.walk(pathToMemex):
+            for file in files:
+                # process publication tf data
+                if file.endswith(fileExtension):
+                    pathToFile = os.path.join(subdir, file)
+                    print("Deleting: %s" % pathToFile)
+                    os.remove(pathToFile)
+
+# generate search pages and TOC
+def formatSearches(pathToMemex):
+    with open(settings["template_search"], "r", encoding="utf8") as f1:
+        indexTmpl = f1.read()
+    dof = functions.dicOfRelevantFiles(pathToMemex, ".searchResults")
+
+    toc = []
+    for file, pathToFile in dof.items():
+        searchResults = []
+        data = json.load(open(pathToFile))
+        
+        # collect toc
+        template = "<tr> <td>%s</td> <td>%s</td> <td>%s</td> <td>%s</td></tr>"
+
+        linkToSearch = os.path.join("searches", file+".html")
+        pathToPage = '<a href="%s"><i>read</i></a>' % linkToSearch
+        searchString = '<div class="searchString">%s</div>' % data.pop("searchString")
+        timeStamp = data.pop("timestamp")
+        tocItem = template % (pathToPage, searchString, len(data), timeStamp)
+        toc.append(tocItem)
+
+        # generate the results page
+        keys = sorted(data.keys(), reverse=True)
+        for k in keys:
+            searchResSingle = []
+            results = data[k]
+            temp = k.split("::::")
+            header = "%s (pages with results: %d)" % (temp[1], int(temp[0]))
+            for page, excerpt in results.items():
+                pdfPage = int(page)
+                linkToPage = '<a href="../%s"><i>go to the original page...</i></a>' % excerpt["pathToPage"]
+                searchResSingle.append("<li><b><hr>(pdfPage: %d)</b><hr> %s <hr> %s </li>" % (pdfPage, excerpt["result"], linkToPage))
+            searchResSingle = "<ul>\n%s\n</ul>" % "\n".join(searchResSingle)
+            searchResSingle = generalTemplate.replace("@ELEMENTHEADER@", header).replace("@ELEMENTCONTENT@", searchResSingle)
+            searchResults.append(searchResSingle)
+        
+        searchResults = "<h2>SEARCH RESULTS FOR: <i>%s</i></h2>\n\n" % searchString + "\n\n".join(searchResults)
+        with open(pathToFile.replace(".searchResults", ".html"), "w", encoding="utf8") as f9:
+            f9.write(indexTmpl.replace("@MAINCONTENT@", searchResults))
+
+    toc = searchesTemplate.replace("@TABLECONTENTS@", "\n".join(toc))
+    return(toc)
 
 def prettifyBib(bibText):
     bibText = bibText.replace("{{", "").replace("}}", "")

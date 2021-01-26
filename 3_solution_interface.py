@@ -117,10 +117,12 @@ def generateMemexStartingPages(pathToMemex):
             authorOrEditor = bibRecord["editor"]
         if "author" in bibRecord:
             authorOrEditor = bibRecord["author"]
-        #if "date" in bibRecord:
-            #date = bibRecord["date"]
-        #else:
-            #print("nodate")
+
+
+        if "year" in bibRecord:
+            date = bibRecord["year"]
+        else:
+            print("nodate")
         #date = bibRecord["year"]
 
         #date = bibRecord["year"]
